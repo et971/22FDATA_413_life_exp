@@ -7,4 +7,18 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(gapminder)
 ```
+
+```{r}
+data("gapminder_unfiltered")
+nrow(gapminder_unfiltered)
+```
+
+```{r}
+gapminder_unfiltered %>%
+  group_by(country)
+```
+
+
